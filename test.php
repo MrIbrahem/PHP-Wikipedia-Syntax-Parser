@@ -17,6 +17,15 @@ function print_pre($array, $html = false)
 
 $contents = file_get_contents(__DIR__ . "/sample_input.txt");
 
+$contents = <<<'WIKI'
+{{cite web
+|t=f
+|t=f3
+| z = {{cite web
+|t=f
+|u=live}}
+}}
+WIKI;
 
 $wikipedia_syntax_parser = new Jungle_WikiSyntax_Parser($contents, "George Harrison");
 
